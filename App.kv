@@ -1,0 +1,40 @@
+MDScreen:
+    md_bg_color: [35/255, 59/255, 54/255, 1]
+
+    MDCard:
+        id: S'scr'
+        orientation: 'vertical'
+        size_hint: None,None
+        size: 600,440
+        pos_hint: {'center_x':0.5,'center_y':0.5}
+        elevation: 3
+        md_bg_color: [26/255, 30/255, 26/255, 1]
+        padding: 20
+        spacing: 40
+
+        MDLabel:
+            text: 'Text Repeater'
+            font_size: 30
+            size_hint_y: None
+            height: self.texture_size[1]
+            halign: 'center'
+        
+        MDTextField:
+            id: 'texten'
+            hint_text: 'Enter the text'
+            size_hint: None,None
+            width: '400dp'
+            pos_hint: {'center_x':0.5}
+
+        MDTextField:
+            id: 'numen'
+            hint_text: 'How many times'
+            size_hint: None,None
+            width: '400dp'
+            pos_hint: {'center_x':0.5}
+        
+        MDFillRoundFlatButton:
+            text: 'Click here!!'     
+            halign: 'center'
+            pos_hint: {'center_x':0.5}
+            on_release: app.click_action()
